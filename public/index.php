@@ -1,6 +1,6 @@
 <?php
     # We charge a configuration file that contains the database connection parameters and other settings.
-    $config = require dirname(__DIR__) . '/boot/app.php';
+    //$config = require dirname(__DIR__) . '/boot/app.php';
 
     /* ▂ ▅ ▆ █  Inclusion  █ ▆ ▅ ▂ */
 
@@ -13,11 +13,18 @@
         # Class SessionManager
         use App\src\Core\Session\SessionManager;
 
+        # Class BootApp
+        use App\boot\BootApp;
+
         include '../Autoloader.php';
     error_reporting(E_ALL);
     /* ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ */
 
     Autoloader::register();
+
+    # We initialize the boot app to load the environment variables and the configuration files
+        $bootApp = new BootApp();
+        $config = $bootApp -> getBootConfig();
 
     # We initialize the session manager and start the session
         $sessionManager = new SessionManager();
@@ -35,6 +42,9 @@
         if ($sessionManager -> needsSessionRegeneration()) {
             $sessionManager -> regenerateSession();
         }
+
+
+
 
     # We initialize the router and the session manager
         Router::setRoads();

@@ -1,0 +1,8 @@
+[31-Mar-2026 15:03:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "App\src\Service\Http\Request" not found in C:\xampp\htdocs\Aide-Ordo-V5.00\App\src\Form\FormValidator.php:55
+Stack trace:
+#0 C:\xampp\htdocs\Aide-Ordo-V5.00\App\src\Controller\UserController.php(109): App\src\Form\FormValidator::validate('login')
+#1 [internal function]: App\src\Controller\UserController->login()
+#2 C:\xampp\htdocs\Aide-Ordo-V5.00\App\src\Core\Router\Router.php(139): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\Aide-Ordo-V5.00\App\public\index.php(53): App\src\Core\Router\Router::dispatch('/login/login', 'login')
+#4 {main}
+  thrown in C:\xampp\htdocs\Aide-Ordo-V5.00\App\src\Form\FormValidator.php on line 55

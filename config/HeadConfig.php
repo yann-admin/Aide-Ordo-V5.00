@@ -9,8 +9,57 @@
 
     /* ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ */
 
-    /* ▂ ▅ ▆ █ Class █ ▆ ▅ ▂ */
-    Class HeadConfig{
+    /* ▂ ▅ ▆ █ Class AssetManager █ ▆ ▅ ▂ */
+    class AssetManager {
+
+        /* ▂ ▅ Attributs ▅ ▂ */
+            protected string $initialCss;
+            protected string $initialJs;
+            /** @var array<string> */
+            protected array $additionalCss = [];
+            /** @var array<string> */
+            protected array $additionalJs = [];
+        /* ▂▂▂▂▂▂▂▂▂▂▂▂ */
+
+        /* ▂ ▅ Methodes ▅ ▂ */
+
+            /* ▂ ▅ __construct ▅ ▂ */
+            /** @return void */
+            public function __construct( array $assets = [] ) {
+                    $this->initialCss = $assets["initialCss"] ?? "assets/css/base.css";
+                    $this->initialJs = $assets["initialJs"] ?? "assets/js/base.js";
+                    $this->additionalCss = $assets["additionalCss"] ?? [];
+                    $this->additionalJs = $assets["additionalJs"] ?? [];
+            }
+
+            /* ▂ ▅  Setters  ▅ ▂ */
+            public function setInitialCss(string $initialCss) : self { $this->initialCss = $initialCss; return $this; }
+            public function setInitialJs(string $initialJs) : self { $this->initialJs = $initialJs; return $this; }
+            public function addAdditionalCss(string $data) : self { $this->additionalCss[] = $data; return $this; }
+            public function addAdditionalJs(string $data) : self { $this->additionalJs[] = $data; return $this; }
+
+            /* ▂ ▅  Getters  ▅ ▂ */
+            public function getInitialCss() : string { return $this->initialCss; }
+            public function getInitialJs() : string { return $this->initialJs; }
+            public function getAdditionalCss() : array { return $this->additionalCss; }
+            public function getAdditionalJs() : array { return $this->additionalJs; }
+
+            /* ▂ ▅  toArray()  ▅ ▂ */
+            /** @return array */
+            public function toArray() : array {
+                return [
+                    'initialCss' => $this->initialCss,
+                    'initialJs' => $this->initialJs,
+                    'additionalCss' => $this->additionalCss,
+                    'additionalJs' => $this->additionalJs,
+                ];
+            }
+        /* ▂▂▂▂▂▂▂▂▂▂▂▂ */
+    }
+
+    /* ▂ ▅ ▆ █ Class HeadConfig █ ▆ ▅ ▂ */
+
+    class HeadConfig{
 
         /* ▂ ▅ Constants ▅ ▂ */
         /* ▂▂▂▂▂▂▂▂▂▂▂▂ */
