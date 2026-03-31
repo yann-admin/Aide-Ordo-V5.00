@@ -1,0 +1,67 @@
+:root{
+    /*       HTML       */
+        --Html_Background:#fcfcfc;
+    /*-------------------*/
+
+    /*       BODY       */
+        --Body_Background_Mobile: rgba(203, 209, 203, 0.750);
+        --Body_Background_Tablet: rgba(203, 209, 203, 0.750);
+        --Body_Background_Descktop: rgba(203, 209, 203, 0.750);
+    /*-------------------*/
+
+    /*       HEADER       */
+        --Header_Background:rgb(0, 113, 128);
+    /*-------------------*/
+
+    /*       NAVBAR       */
+        --NavBar_Background: rgb(0, 113, 128);
+    /*-------------------*/
+
+/*       NAVBAR       */
+/*-------------------*/
+    
+
+
+
+
+
+    /*       FORMS       */
+        --Form_Background: #cbd1cb70;
+        --Form_Shadow_1: rgba(0, 113, 128, 0.70);
+        --Form_Shadow_2: rgba(0, 113, 128, 1);
+        --Form_spanPictoInfo: rgba(0, 19, 128, 0.801);
+
+    /*       INPUTS      */ 
+        --Form_Input_Required: rgba(231, 128, 44, 0.836);
+        --Form_Input_Validate: rgba(24, 150, 19, 0.7);
+        --Form_Input_Neutral: rgba(24, 150, 19, 0.350);
+        --Form_Input_Invalid: rgba(255, 0, 0, 0.500);    
+    /*-------------------*/
+
+    /*-------------------*/
+
+
+
+
+
+    /* --FORMULAIRE_Border: #0c611a5b; */
+        --Form_Required_Border:rgba(255, 0, 0, 0.63);
+        --Form_Valide_Border:rgba(34, 223, 27, 0.568);
+        --Form_Invalide_Border:rgba(255, 0, 0, 0.63);
+
+
+
+        --Div_Nav_Background:rgba(18, 46, 207, 0.769);
+        --Div_Footer_Background:rgba(18, 46, 207, 0.769);
+        --Li_Nav_item_Hover:rgb(165, 42, 42);
+        --Li_Dropdown_Item_Hover:rgba(165, 42, 42, 0.616);
+
+    /*       FOOTER       */
+        --Footer_Background: rgb(0, 113, 128);
+        --Footer_Text_Color: rgb(255, 255, 255);
+    /*-------------------*/
+
+
+
+
+}

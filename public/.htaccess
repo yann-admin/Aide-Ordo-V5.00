@@ -1,0 +1,14 @@
+Options -Indexes -MultiViews
+RewriteEngine On
+# If your project is in a subdirectory, uncomment the line below and set the correct path
+
+# RewriteBase /Aide-Ordo-V4.00
+
+
+# Autoriser les fichiers existants (css, js, images...)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+
+RewriteRule ^ index.php [QSA,L]

@@ -1,0 +1,71 @@
+@import"color.css";
+
+/* Media query ciblant les mobiles (jusqu’à 30em ≈ 480px) */
+@media screen and (max-width: 30em) {}
+/* Media query ciblant les tablettes (plus de 30em) */
+@media screen and (min-width: 30em) {}
+/* Media query ciblant les ordinateur (min de 30em et max 62em) */
+@media screen and (min-width: 30em) and (max-width: 62em) {}
+
+.container-form-login{
+    /* width: 400px;
+    height: auto; */
+    /* border: 4px solid var(--FORMULAIRE_Border); */
+    border-radius: 15px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+    /* box-shadow: var(--Form_Shadow_1) 0px 50px 60px -12px inset, var(--Form_Shadow_2) 0px 18px 36px -18px inset; */
+    background-color: rgb(241, 239, 239);
+    font-size: 1em;
+    /* margin: 1em 1em 2em 1em;
+    padding: 2em 1em 2em 1em; */
+
+}
+
+.imageForm{
+    width: 40%;
+    height: auto;
+}
+/* .titleForm{
+
+} */
+.pictoInfo{
+    padding: 0px 3px ;
+    background-color: blue;
+    color: white;
+    border-radius: 50% ;
+}
+.form-control{
+    font-size: 1em; 
+}
+
+.form-floating>.form-control{
+    height: calc(2.5rem + calc(var(--bs-border-width) * 2));
+    min-height: calc(2.5rem + calc(var(--bs-border-width) * 2));
+    line-height: 1;
+}
+
+.form-floating>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    max-width: 100%;
+    height: 100%;
+    padding: 0.5rem .75rem;
+    overflow: hidden;
+    color: rgba(var(--bs-body-color-rgb), .65);
+    text-align: start;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: none;
+    border: var(--bs-border-width) solid transparent;
+    transform-origin: 0 0;
+    transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+}
+
+.custom-tooltip{
+  --bs-tooltip-bg: blue;
+  --bs-tooltip-color: var(--bs-white);
+  --bs-tooltip-max-width: 100%;
+};
+
