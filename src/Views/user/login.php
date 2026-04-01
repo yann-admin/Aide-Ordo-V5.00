@@ -1,6 +1,6 @@
 <!-- HTML -->
 <div class=" d-flex justify-content-center " > 
-    <!-- <div id="Msg-body" class="col-10 col-sm-5 col-lg-3 mt-3 mb-3"> connection </div> -->
+    <div id="div-msg" class="col-10 col-sm-5 col-lg-3 mt-3 mb-3">  </div>
 </div>
 
 
@@ -21,6 +21,7 @@
             <div id='modal-msg' class="d-flex justify-content-center align-items-center mt-3">
                 <!-- Via JavaScript response Fetch </div> -->
             </div>
+
             <div class="modal-body d-flex justify-content-center">
                 <?= $data["htmlForm"] ?? "" ?>
             </div>

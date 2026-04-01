@@ -50,9 +50,11 @@
                         ->addChild(new MenuItem('Mes pièces de format', 'piece-format', 'fa-solid fa-cogs', 3)),
 
                     $production = (new MenuItem('Production', '#', 'fa-solid fa-box', 2))
-                        ->addChild(new MenuItem('Mes productions', 'production', 'fa-solid fa-boxes', 3))
+                        ->addChild(new MenuItem('Mes productions', 'production', 'fa-solid fa-boxes', 3)),
 
-
+                    (new MenuItem('', '#', 'hr', 2)),
+                                
+                    (new MenuItem('Se déconnecter', 'logout', 'fa-solid fa-right-from-bracket', 2))
                 ];
             }
 

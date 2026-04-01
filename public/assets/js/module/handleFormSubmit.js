@@ -28,7 +28,7 @@ if (MODE_DEV) console.clear();
  *  @param {HTMLElement} modalMsg - The element where the response message will be displayed
  * @return {Promise<void>} - A promise that resolves when the form submission is complete
  */
-export async function handleFormSubmit( form , url , modalMsg ) {
+export async function handleFormSubmit( form , url , divMsg, tOnSuccess = null ) {
     //Note : Seuls les champs de formulaires valides sont inclus dans un objet FormData, 
     // c'est-à-dire ceux qui portent un nom (attribut name), qui ne sont pas désactivés et 
     // qui sont cochés (boutons radio et cases à cocher) ou sélectionnés (une ou plusieurs options dans une sélection).
@@ -49,15 +49,20 @@ export async function handleFormSubmit( form , url , modalMsg ) {
         console.log(data)
         if (data.success) {
             // Step 6 -> If the response is successful, we display a success message and redirect to the dashboard
-            modalMsg.innerHTML = `<div class="alert alert-success" role="alert">${data.message}</div>`;
+            divMsg.innerHTML = `<div class="alert alert-success" role="alert">${data.message}</div>`;
             let redirectUrl = data.redirectUrl || "error"; // Use the redirectUrl from the response, or default to "error"
-            setTimeout(() => {
+            if (tOnSuccess != null) {
+                setTimeout(() => { window.location.href = redirectUrl; }, tOnSuccess);
+            } else {
                 window.location.href = redirectUrl;
-            }, 2000);
+            }
+        
+                
+            
 
         } else {
             // Step 7 -> If the response is an error, we display the error message
-            modalMsg.innerHTML = `<div class="alert alert-danger text-center" role="alert">${data.message}</div>`;
+            divMsg.innerHTML = `<div class="alert alert-danger text-center" role="alert">${data.message}</div>`;
         }
    })
 

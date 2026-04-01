@@ -26,7 +26,7 @@
             /* ▂▂▂▂▂▂▂▂▂▂▂ */
 
             /* ▂ ▅ Attributs ▅ ▂ */
-             private array $bootConfig = [];
+            // private array $bootConfig = [];
             /* ▂▂▂▂▂▂▂▂▂▂▂▂*/
 
             /* ▂ ▅ Constructor ▅ ▂ */
@@ -45,21 +45,21 @@
                     $dotenvEnv->load();
                 }
 
-                /* Charger les configs */
-                $config = [
-                    'app' => require $rootDir . '/config/app.php',
-                    'databaseSQL' => require $rootDir . '/config/databaseSQL.php',
-                    'databaseNoSQL' => require $rootDir . '/config/databaseNoSQL.php'
-                ];
+                // /* Charger les configs */
+                // $config = [
+                //     'app' => require $rootDir . '/config/app.php',
+                //     'databaseSQL' => require $rootDir . '/config/databaseSQL.php',
+                //     'databaseNoSQL' => require $rootDir . '/config/databaseNoSQL.php'
+                // ];
 
-                $this->bootConfig = $config;
+                // $this->bootConfig = $config;
             }
 
 
 
-            public function getBootConfig(): array {
-                return $this->bootConfig;
-            }
+            // public function getBootConfig(): array {
+            //     return $this->bootConfig;
+            // }
         }
 
 

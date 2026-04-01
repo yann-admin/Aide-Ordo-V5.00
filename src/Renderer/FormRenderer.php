@@ -171,7 +171,7 @@
                                     $form[] = "<input type='" . self::securityXSS($input['type']) . "' name='" . self::securityXSS($input['name']) . "' {$valueInput} $attributes/>";
                                     $form[] = "<label for='" . self::securityXSS($input['name']) . "'>" . self::securityXSS(ucfirst($labelField)) . "</label>";
                                 $form[] = "</div>";
-                                $form[] ="<span id='password-eye' class='input-group-text pictoEye'>" . "<i class='fa-solid fa-eye'></i>" . "</span>";
+                                $form[] ="<span id='password-eye' class='input-group-text picto-eye'>" . "<i class='fa-solid fa-eye'></i>" . "</span>";
                             $form[] = "</div>";
                             continue; // we skip the rest of the loop for password inputs, we want to wrap them in a div with an icon
                         }

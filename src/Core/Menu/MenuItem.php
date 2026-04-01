@@ -46,7 +46,7 @@
                 }
 
 
-                /* ▂ ▅ __construct ▅ ▂ */
+                /* ▂ ▅ addChild ▅ ▂ */
                 /** @param MenuItem $item */
                 /** @return $this */
                 public function addChild(MenuItem $item): self{
@@ -54,19 +54,13 @@
                     return $this;
                 }
 
-                /* ▂ ▅ __construct ▅ ▂ */
+                /* ▂ ▅ hasChildren ▅ ▂ */
                 /** @return bool */
                 public function hasChildren(): bool{
                     return !empty($this->children);
                 }
 
-                /* ▂ ▅ __construct ▅ ▂ */
-                /** @return MenuItem[] */
-                public function getChildren(): array{
-                    return $this->children;
-                }
-
-                /* ▂ ▅ __construct ▅ ▂ */
+                /* ▂ ▅ canAccess ▅ ▂ */
                 /** @param int $userLevel */
                 /** @return bool */
                 public function canAccess(int $userLevel): bool{
@@ -74,28 +68,35 @@
                 }
 
 
+                /* ▂ ▅ getChildren ▅ ▂ */
+                /** @return MenuItem[] */
+                public function getChildren(): array{
+                    return $this->children;
+                }
 
-
-
-
-                /* ▂ ▅ __construct ▅ ▂ */
+                /* ▂ ▅ getTitle ▅ ▂ */
                 /** @return string */
                 public function getTitle(): string{
                     return htmlspecialchars($this->title, ENT_QUOTES, 'UTF-8');
                 }
 
-                /* ▂ ▅ __construct ▅ ▂ */
+                /* ▂ ▅ getUrl ▅ ▂ */
                 /** @return string */
                 public function getUrl(): string{
                     return htmlspecialchars($this->url, ENT_QUOTES, 'UTF-8');
                 }
 
-                /* ▂ ▅ __construct ▅ ▂ */
+                /* ▂ ▅ getIcon ▅ ▂ */
                 /** @return string */
                 public function getIcon(): string{
                     return htmlspecialchars($this->icon, ENT_QUOTES, 'UTF-8');
                 }
 
+                /* ▂ ▅ getLevel ▅ ▂ */
+                /** @return int */
+                public function getLevel(): int{
+                    return $this->level;
+                }
 
 
             /* ▂▂▂▂▂▂▂▂▂▂▂ */

@@ -49,7 +49,18 @@
                     $html = [];
                     foreach ($items as $item) {
 
+
                         if (!$item->canAccess($userLevel)) {
+                            continue;
+                        }
+
+                        if ($item->getIcon() === 'hr') {
+                            $html[] = '<li><hr class="nav-item"></li>';
+                            continue;
+                        }
+
+                        if ($item->getIcon() === 'liHr') {
+                            $html[] = '<hr class="dropdown-divider">';
                             continue;
                         }
 

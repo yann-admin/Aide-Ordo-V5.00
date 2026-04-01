@@ -7,6 +7,9 @@
     /* ▂ ▅ ▆ █  Inclusion  █ ▆ ▅ ▂ */
         # We include the Road class to get the road configuration, which is a class that contains a static method that returns an array of routes with their corresponding HTTP methods, paths, and controller actions
         use App\config\Road;
+
+        # Class BootApp
+        use App\boot\BootApp;
     /* ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ */
 
 
@@ -16,7 +19,6 @@
             /* ▂ ▅ Constants ▅ ▂ */
                 const NOT_FOUND = '404 - Page not found';
                 const API = '/Aide-Ordo-V5.00';
-                
             /* ▂▂▂▂▂▂▂▂▂▂▂ */
 
             /* ▂ ▅ Attributs ▅ ▂ */

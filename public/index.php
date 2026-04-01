@@ -24,7 +24,7 @@
 
     # We initialize the boot app to load the environment variables and the configuration files
         $bootApp = new BootApp();
-        $config = $bootApp -> getBootConfig();
+        // $config = $bootApp -> getBootConfig();
 
     # We initialize the session manager and start the session
         $sessionManager = new SessionManager();
